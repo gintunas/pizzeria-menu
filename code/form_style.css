@@ -1,0 +1,163 @@
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form {
+	margin: 0 auto;
+	width: 500px;
+	padding: 2em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+}
+
+div+div {
+	margin-top: 1em;
+}
+
+label span {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	width: auto;
+	border: none;
+}
+
+input,
+textarea,
+fieldset {
+	width: 250px;
+	box-sizing: border-box;
+	border: 1px solid #CCC;
+}
+
+input, select {
+	outline: none;	
+}
+
+input,
+textarea {
+	font: 1em sans-serif;
+	height: 34px;
+}
+
+fieldset {
+	margin-left: 136px;
+}
+
+label {
+	position: relative;
+	margin-right: 15px;
+}
+
+
+#photos-div img {
+	height: 150px;
+	width: 150px;
+}
+
+#photos-div {
+	display: inline-grid;
+	grid-row-gap: 15px;
+	grid-column-gap: 15px;
+	grid-template-columns: 150px 150px 150px;
+	margin-bottom: 20px;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+[type=radio] {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+
+[type=radio]+img {
+	cursor: pointer;
+}
+
+
+[type=radio]:checked+img {
+	box-shadow: 0 0 2pt 2pt red;
+}
+
+select {
+	width: 150px;
+	font-size: 16px;
+	border: 1px solid #CCC;
+	height: 34px;
+	background: none;
+}
+
+article.pizza-form-article {
+	display: block;
+	text-align: center;
+}
+
+section.info-section {
+	display: inline-block;
+	text-align: left;
+	margin: 10px 0;
+}
+
+.pizza-photos-section {
+	margin: 30px 0;
+}
+
+#add-topping-button {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	font-size: 2em;
+	font-family: monospace;
+	width: 34px;
+	margin-left: 5px;
+	flex-shrink: 0;
+}
+
+div.toppings-div {
+	margin-right: 1em;
+	width: fit-content;
+}
+
+div#toppings-input-div {
+	display: inline-flex;
+	flex-direction: row;
+	width: 250px;
+}
+
+ul#toppings-list li {
+	margin: 10px 0;
+}
+
+section.buttons-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 15px;
+}
+
+section.buttons-section>button[type='submit'] {
+	background-color: #4CAF50;
+}
+
+section.buttons-section>button[type='reset'] {
+	background-color: #F44336;
+}
+
+label.photos-label {
+	white-space: nowrap;
+}
+
+p.toppings-list-p {
+	margin-top: 40px;
+}

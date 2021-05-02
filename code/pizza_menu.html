@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizzeria Menu</title>
+	<link rel="stylesheet" href="menu_style.css" />
+	<link rel="stylesheet" href="common_style.css" />
+	<link href='https://fonts.googleapis.com/css?family=IM Fell English SC' rel='stylesheet'>
+	<script defer src="menu_script.js"></script>
+</head>
+
+<body onload="loadPizzaItems()">
+	<nav class="navigation">
+		<a href="pizza_form.html">
+			<button class="big-button navigation-button">To Form</button>
+		</a>
+	</nav>
+	<aside class="sorting-div">
+		<h3>Sort by:</h3>
+		<form id="radio-form">
+			<p>
+				<input type="radio" id="byName" name="sorting" value="byName" checked onclick="sortAndDisplayPizzas()" />
+				<label for="byName">Name</label>
+			</p>
+			<p>
+				<input type="radio" id="byPrice" name="sorting" value="byPrice" onclick="sortAndDisplayPizzas()" />
+				<label for="byPrice">Price</label>
+			</p>
+			<p>
+				<input type="radio" id="byHeat" name="sorting" value="byHeat" onclick="sortAndDisplayPizzas()" />
+				<label for="byHeat">Heat</label>
+			</p>
+		</form>
+	</aside>
+	<article id="menu-article"></article>
+	<!-- <div style="color: lightgray; position:relative;  top:200px;">Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+</body>
+
+</html>

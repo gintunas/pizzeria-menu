@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create Pizza Form</title>
+	<link rel="stylesheet" href="form_style.css" />
+	<link rel="stylesheet" href="common_style.css" />
+	<script defer src="form_script.js"></script>
+</head>
+
+<body>
+	<nav class="navigation">
+		<a href="pizza_menu.html">
+			<button class="big-button navigation-button">To Menu</button>
+		</a>
+	</nav>
+	<article class="pizza-form-article">
+
+		<form id="create-pizza-form" onsubmit="submitForm(event)" onreset="clearForm()">
+			<h2>Fill form to create new pizza:</h2>
+
+			<section class="info-section">
+				<p>
+					<label for="name-input">
+						<span>Pizza name:</span>
+					</label>
+					<input type="text" class="form-control" id="name-input" name="name" required maxlength="30" />
+				</p>
+				<p>
+					<label for="price-input">
+						<span>Price:</span>
+					</label>
+					<input type="number" id="price-input" name="price" required step="0.01" min=0.01 />
+				</p>
+				<p>
+					<label for="heat-input">
+						<span>Heat:</span>
+					</label>
+					<select type="number" id="heat-input" name="heat">
+						<!-- I could've made it optional but I added "Pepper free" option because in my opinion UI is more clear when "No heat" option is stated explicitly -->
+						<option value="0">Pepper free</option>
+						<option value="1">Mild</option>
+						<option value="2">Spicy</option>
+						<option value="3">Hot</option>
+					</select>
+				</p>
+				<div class="toppings-div">
+					<label for="toppings-input-div">
+						<span>Add topping:</span>
+					</label>
+					<div id="toppings-input-div">
+						<input type="text" id="toppings-input">
+						<button type="button" onclick="addTopping()" id="add-topping-button">+</button>
+					</div>
+				</div>
+				<p class="toppings-list-p">
+					<fieldset>
+						<legend>Toppings on pizza (min 2)</legend>
+						<ul id="toppings-list">
+						</ul>
+					</fieldset>
+				</p>
+
+			</section>
+
+			<section class="pizza-photos-section">
+
+				<label class="photos-label" for="photos-p">
+					<span>Choose photo:</span>
+				</label>
+
+				<div id="photos-div">
+					<label>
+						<input type="radio" name="photo" value="../img/1.jpg">
+						<img src="../img/1.jpg" alt="pizza-photo">
+					</label>
+
+					<label>
+						<input type="radio" name="photo" value="../img/2.jpg">
+						<img src="../img/2.jpg" alt="pizza-photo">
+					</label>
+
+					<label>
+						<input type="radio" name="photo" value="../img/3.jpg">
+						<img src="../img/3.jpg" alt="pizza-photo">
+					</label>
+
+					<label>
+						<input type="radio" name="photo" value="../img/4.jpg">
+						<img src="../img/4.jpg" alt="pizza-photo">
+					</label>
+
+					<label>
+						<input type="radio" name="photo" value="../img/5.jpg">
+						<img src="../img/5.jpg" alt="pizza-photo">
+					</label>
+
+					<label>
+						<input type="radio" name="photo" value="../img/6.jpg">
+						<img src="../img/6.jpg" alt="pizza-photo">
+					</label>
+				</div>
+			</section>
+
+			<section class="buttons-section">
+				<button class="big-button" type="reset">Clear form</button>
+				<button class="big-button" type="submit">Submit</button>
+			</section>
+
+		</form>
+	</article>
+
+</body>
+</html>

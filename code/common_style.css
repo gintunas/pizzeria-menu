@@ -1,0 +1,30 @@
+button {
+	transition: 0.2s;
+	border: none;
+	background: none;
+}
+
+button:hover {
+	transform: translate(0, -2px);
+	cursor: pointer;
+}
+
+button:active {
+	transform: translate(0, 2px);
+}
+
+.navigation {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+button.big-button {
+	padding: 10px 30px;
+	color: white;
+	font-weight: bold;
+}
+
+button.navigation-button {
+	background-color: #9e9e9e
+}
