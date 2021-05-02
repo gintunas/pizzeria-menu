@@ -82,7 +82,7 @@ function createPizzaItem(dict) {
 	const toppings = dict["toppings"]
 	const photo = dict["photo"]
 
-	const formattedToppings = toppings.replace(".", ", ")
+	const formattedToppings = toppings.replace(/\./g, ", ")
 
 	const peppersOnPizza = pepperHtml.repeat(heat)
 
